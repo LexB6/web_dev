@@ -1,0 +1,13 @@
+table, th, td {
+    border: 3px solid black;
+    border-collapse: collapse;
+    border-color: #d3c4e7;
+    padding: 15px;
+
+
+}
+p {
+    font-size: 30px;
+    text-align:center;
+    color: rgb(102, 88, 109);
+}
