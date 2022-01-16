@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+p, h1, h2, h4{
+    color: white;
+    font-family: sans-serif;
+
+}
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+
+header {
+    background-image: url("/images/banner.jpeg");
+    height: 700px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+body {
+    background-color: black;
+}
+
+nav {
+    width: 100%;
+    align-items: flex-start;     
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: space-around;
+    background: #000000;
+    padding-bottom: 40px;
+}
+
+.item {
+    padding: 25px;
+    width: auto;
+    display:inline;
+    position: relative;
+}
+article{
+    display: flex;
+    justify-content: space-between;
+}
+
+.right {
+    width: 50%;
+    padding-left:50px;
+    padding-right:50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.left {
+    width: 50%;
+    padding-left:50px;
+    padding-right:50px;
+    margin-left: 50px;
+    margin-right: 50px;
+
+}
+img {
+    max-width: 100%;
+padding-top: 50px;
+}
+
+.right h4 {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+.left h4 {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+footer {
+text-align: center;
+padding-top: 90px;
+}
+
+footer p{
+    padding:60px;
+}
+
+footer h1{
+
+    padding-bottom: 70px;
+}
