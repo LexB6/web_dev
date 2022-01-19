@@ -1,0 +1,29 @@
+body
+	{
+		background: url(/images/download.gif);
+		background-size: cover;
+		overflow: hidden;
+	}
+
+#panda
+	{
+		position:relative;
+		top:300px;
+		background: url(/images/NicePng_butterfly-png_3382426\ \(1\).png); 
+		width:85px;
+		height:90px;		
+		animation:walking_animation 1s steps(10) infinite,move_forward 10s linear infinite;	
+	}
+
+@keyframes walking_animation
+	{
+		0%{background-position:0px;}
+		100%{background-position:983px;}
+	}
+
+@keyframes move_forward
+	{
+		0%{transform:translateX(-100px);}
+		100%{transform:translateX(1500px);}
+	}
+
