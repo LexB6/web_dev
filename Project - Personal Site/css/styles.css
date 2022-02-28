@@ -1,0 +1,494 @@
+html{
+    background-color: black;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Cutive+Mono");
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* -- Alternative Start -- */
+
+.hero1{
+  position: relative;
+  width:100vw;
+  height:100vh;
+}
+.hero2{
+  height:50vh;
+  width:50vw;
+  background:#E18B0A;
+  opacity: 0.25;
+  position: absolute;
+  top:0;
+  left:0;
+}
+/* -- Alternative End -- */
+
+
+
+label .menu {
+  position: absolute;
+  right: -100px;
+  top: -100px;
+  z-index: 100;
+  width: 200px;
+  height: 200px;
+  background: black;
+  border-radius: 50% 50% 50% 50%;
+  transition: 0.5s ease-in-out;
+  box-shadow: 0 0 0 0 #412200, 0 0 0 0 #412200;
+  cursor: pointer;
+}
+label .hamburger {
+  position: absolute;
+  top: 135px;
+  left: 50px;
+  width: 30px;
+  height: 2px;
+  background: #412200;
+  display: block;
+  transform-origin: center;
+  transition: 0.5s ease-in-out;
+}
+label .hamburger:after, label .hamburger:before {
+  transition: 0.5s ease-in-out;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #412200;
+}
+label .hamburger:before {
+  top: -10px;
+}
+label .hamburger:after {
+  bottom: -10px;
+}
+label input {
+  display: none;
+}
+label input:checked + .menu {
+  box-shadow: 0 0 0 100vw black, 0 0 0 100vh black;
+  border-radius: 0;
+}
+label input:checked + .menu .hamburger {
+  transform: rotate(45deg);
+}
+label input:checked + .menu .hamburger:after {
+  transform: rotate(90deg);
+  bottom: 0;
+}
+label input:checked + .menu .hamburger:before {
+  transform: rotate(90deg);
+  top: 0;
+}
+label input:checked + .menu + ul {
+  opacity: 1;
+}
+label ul {
+  z-index: 200;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.25s 0s ease-in-out;
+}
+label a {
+  margin-bottom: 1em;
+  display: block;
+  color: #B94D31;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.header{
+    position: relative;
+}
+
+/*
+.header_img {
+    transform-origin: center;
+    border-radius: 500px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-color: transparent;
+    border-style: solid;
+    max-width: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    position: relative;
+
+}*/
+
+.header_logo {
+  position: absolute;
+  top: 35vw;
+  left: 50%;
+  max-width: 10vw;
+  transform:translateX(-50%);
+}
+
+.header_img {
+  position: absolute;
+  top:10%;
+  left:50%;
+  max-width: 30vw;
+  transform:translateX(-50%);
+  border-radius: 500px;
+}
+
+.h1_header {
+    font-size: 2.625rem;
+    overflow-wrap: break-word;
+    font-weight: 600;
+    text-align: right;
+    line-height:60px;
+    color:white; 
+}
+
+.head1{
+  position: absolute;
+  top: 10%;
+  left: calc(35vw - 50px);
+}
+.head2{
+  position: absolute;
+  top: calc(10% + 60px);
+  left: calc(35vw - 200px);
+}
+.head3{
+  position: absolute;
+  top: calc(10% + 120px);
+  left: calc(35vw - 250px);
+}
+
+
+
+.header p{
+    top: 50%;
+    left: 75%;
+    position: absolute;
+    color: #B94D31;
+    text-align: right;
+    line-height:35px;
+}
+
+article{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+article p{
+    color: #B94D31;
+}
+
+
+
+.me_item {
+    height:800px;
+    max-width: 25%;
+    background-color: black;
+    padding: 30px;
+}
+.me_item p, h1, h2{
+    color: azure;
+}
+
+
+.me_image{
+    max-width: 100%;  
+   }
+
+.text_item {
+
+    background-color:#412300;
+    height: 700px;
+    padding-top: 30px;
+}
+
+.text_item p{
+    background-color: black;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+
+/*skills bars */
+
+.skillbar {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.skillbar-bar:before {
+    background: #eee;
+    content: "";
+    height: 3px;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.skillbar-bar {
+    height: 3px;
+    width: 0px;
+    background: #B94D31;
+    transition-property: width, background-color;
+}
+
+.skillbar-title {
+    color: #B94D31;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.skill-bar-percent {
+    float: right;
+    display: inline-block;
+    color: #B94D31;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* CENTERING ONLY */
+
+.wrapper {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: black;
+
+}
+
+/* end of skillsbars */
+
+
+
+
+
+/* the first star code
+.skill-container {
+	max-width: 200px;
+	background: #F9F9F9;
+	margin: auto;
+}
+.skill-title {
+	font-size: 20px;
+	font-weight: 300;
+	text-align: center;
+	letter-spacing: 0.2em;
+	color: #C7AE5D;
+	padding: 60px;
+	background: #F9F9F9;
+	border-bottom: 1px solid #EEE;
+	margin-bottom: 30px;
+}
+.skill-unit {
+	width: 200px;
+	height: auto;
+	display: block;
+	float:;
+	background: #FFF;
+	padding: 0 0 0 20px;
+}
+.skill-lable {
+	font-size: 14px;
+	letter-spacing: 0.1em;
+	color: #DDBF75;
+	display: block;
+	padding: 0 0 10px 0;
+}
+.skill-icon { font-size: 0; }
+/* font-size: 0; is required for 
+removing the white space in the 
+sapn-icon break point */
+/*
+
+.skill-icon span {
+	width: 8px;
+	height: 8px;
+	display: block;
+	background: #DDBF75;
+	border: 1px solid #FFF;
+	border-radius: 50%;
+	display: inline-block;
+	margin: 0 6px 30px 0;
+}
+.skill-icon span:after {
+	content: '';
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border: 1px solid #DDBF75;
+	border-radius: 50%;
+	margin: -2px 0 0 -2px;
+}
+.skill-0 span:nth-child(n+1) { background: #FFF; }
+.skill-1 span:nth-child(n+2) { background: #FFF; }
+.skill-2 span:nth-child(n+3) { background: #FFF; }
+.skill-3 span:nth-child(n+4) { background: #FFF; }
+.skill-4 span:nth-child(n+5) { background: #FFF; }
+.skill-5 span:nth-child(n+6) { background: #FFF; }
+.skill-6 span:nth-child(n+7) { background: #FFF; }
+.skill-7 span:nth-child(n+8) { background: #FFF; }
+.skill-8 span:nth-child(n+9) { background: #FFF; }
+.skill-9 span:nth-child(n+10) { background: #FFF; }
+.skill-10 span:nth-child(n+11) { background: #FFF; }
+
+
+/*
+
+
+
+
+/*
+.l-block.l-letters .l-letters-effect {
+    white-space: pre-wrap;
+    filter: blur(calc(var(--p) * 10px));
+    opacity: calc(1 - var(--p));
+}
+
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+user agent stylesheet
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+.l-block.l-letters .l-letters-container {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    text-align: center;
+    overflow: hidden;
+}
+style attribute {
+    --p: 0.642844;
+}
+
+*/
+
+
+.sections-split{
+  display: flex;
+      flex-wrap: wrap;
+      width:100vw; 
+}
+
+.sec-1{
+  width:33vw;
+  position: relative;
+  height:800px;
+  background: black;
+  padding:5%
+}
+
+.sec-2{
+  width:67vw;
+  height:700px;
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  margin-top:50px;
+  background:#382208
+  ;
+}
+
+.line{
+  width:10px;
+  background: #E18B0A;
+  height:80vh;
+  position: absolute;
+  left:7%;
+  bottom:350px;
+}
+.sec-3{
+ background:black;
+ width:25vw;
+height:80%;
+position: relative;
+top:10%;
+padding:9%;
+}
+
+.sec-3 p{
+  color: #B94D31!important;
+  text-justify: center!important;
+}
+
+.sec-4{
+  width:10vw;
+  background-image:url("/images/pexels-yarennur-babalik-11096657.jpg");
+  background-size: cover;
+  background-position: center;
+  height:800px;z-index: 5;
+  position: relative;
+  bottom:100px;
+}
+
+
+
+.sec-5{
+  width:23vw;
+  background:black;
+  height:400px;
+  position: relative;
+  top: 300px;
+  padding:7%;
+}
+
+.sec-5 p{
+  color: #B94D31!important;
+  text-justify: center!important;
+}
+
+.sec-1 p, h1, h2{
+  color: azure;
+}
+
+.sec-2 p, h1, h2{
+  color: azure;
+}
